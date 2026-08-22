@@ -216,3 +216,52 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# ===== PROJECT SPECIFIC =====
+# Data directories (too large for git)
+data/raw/
+data/train/
+data/val/
+data/test/
+data/processed/
+
+# Model files
+models/*.h5
+models/*.keras
+models/*.pkl
+*.h5
+*.keras
+
+# Logs
+logs/
+*.log
+
+# Output
+output/
+results/
+
+# Temporary
+temp/
+tmp/
+*.tmp
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Training checkpoints
+*.ckpt
+checkpoint/
+
