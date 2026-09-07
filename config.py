@@ -24,6 +24,7 @@ DATASET_CONFIG = {
     "random_seed": 42,
     "image_size": (224, 224),
     "batch_size": 32,
+    "max_images_per_category": 200
 }
 
 # Modell-Konfiguration

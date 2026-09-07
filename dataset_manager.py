@@ -150,14 +150,18 @@ class DatasetManager:
             
             if not category_path.exists():
                 continue
-            
+            img_count: int = 0
             for img_file in category_path.glob('*'):
+                print(f"Lade {img_file}...")
+                if img_count >= config.DATASET_CONFIG['max_images_per_category']:
+                    break
                 try:
                     img = cv2.imread(str(img_file))
                     if img is not None:
                         img = cv2.resize(img, config.DATASET_CONFIG['image_size'])
                         images.append(img)
                         labels.append(config.ALPHABET_MAPPING[category])
+                        img_count += 1
                 except Exception as e:
                     print(f"Fehler beim Laden von {img_file}: {e}")
         
