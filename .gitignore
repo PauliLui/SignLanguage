@@ -265,3 +265,6 @@ Thumbs.db
 *.ckpt
 checkpoint/
 
+# local Settings
+slvenv/
+
